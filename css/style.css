@@ -1158,6 +1158,8 @@ h3 { font-size: 1.15rem; font-weight: 700; color: var(--primary); letter-spacing
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
+  align-self: flex-start;
+  margin-left: -4px;
 }
 .footer-brand-text { display: flex; flex-direction: column; }
 .fb-main { color: var(--white); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; }
