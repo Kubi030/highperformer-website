@@ -59,13 +59,19 @@
       target.classList.add('active');
     }
 
-    // Update sidebar active link
+    // Update sidebar active link + aria-current
     document.querySelectorAll('.s-link').forEach(function (link) {
       link.classList.remove('active');
+      link.removeAttribute('aria-current');
       if (link.getAttribute('data-page') === pageId) {
         link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
       }
     });
+
+    // Update browser URL (enables back/forward + bookmarking)
+    const urlHash = pageId === 'home' ? '#' : '#' + pageId;
+    history.pushState({ page: pageId }, '', urlHash);
 
     // Close sidebar
     closeSidebar();
@@ -97,6 +103,18 @@
 
   // ── Attach click listeners to all [data-page] elements ──
   document.addEventListener('click', function (e) {
+    // Handle smooth scroll links
+    const scrollLink = e.target.closest('.scroll-to');
+    if (scrollLink) {
+      e.preventDefault();
+      const targetId = scrollLink.getAttribute('href').substring(1);
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      return;
+    }
+
     const trigger = e.target.closest('[data-page]');
     if (trigger) {
       e.preventDefault();
@@ -120,6 +138,7 @@
   if (kontaktForm) {
     kontaktForm.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (!kontaktForm.reportValidity()) return;
       const btn = kontaktForm.querySelector('.btn-submit');
       const origText = btn.textContent;
       btn.textContent = '✓ Nachricht gesendet!';
@@ -197,8 +216,20 @@
     counters.forEach(function (c) { counterObserver.observe(c); });
   }
 
-  // ── Initialize ──
-  initAnimations(document);
+  // ── Mark all decorative SVGs as aria-hidden ──
+  document.querySelectorAll('svg:not([aria-label]):not([role="img"])').forEach(function (svg) {
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+  });
+
+  // ── Browser back/forward navigation ──
+  window.addEventListener('popstate', function (e) {
+    navigateTo((e.state && e.state.page) || 'home');
+  });
+
+  // ── Initialize: read URL hash on first load ──
+  var initialPage = location.hash.slice(1) || 'home';
+  navigateTo(initialPage);
   animateCounters();
 
 })();
