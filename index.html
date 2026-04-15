@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highperformer Beratungsgesellschaft mbH</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Disclaimer -->
+  <div id="disclaimer-bar">
+    <span>&#9888; Diese Website ist fiktiv und wurde im Rahmen eines Universitätsprojekts (6. Semester) erstellt.</span>
+    <button id="close-disclaimer" aria-label="Schließen">&#10005;</button>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-top">
+      <div class="sidebar-brand">
+        <img src="assets/images/logo.png" alt="Highperformer Beratungsgesellschaft mbH" class="sidebar-logo-img">
+      </div>
+      <button id="sidebar-close" class="sidebar-close" aria-label="Menü schließen">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#" class="s-link active" data-page="home">
+          <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Startseite
+        </a></li>
+        <li><a href="#" class="s-link" data-page="ueber-uns">
+          <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          Über uns
+        </a></li>
+        <li><a href="#" class="s-link" data-page="history">
+          <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          History
+        </a></li>
+      </ul>
+
+      <div class="s-divider">Leistungen</div>
+
+      <ul>
+        <li><a href="#" class="s-link" data-page="unternehmensberatung">
+          <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Unternehmensberatung
+        </a></li>
+        <li><a href="#" class="s-link" data-page="wirtschaftspruefung">
+          <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Wirtschaftsprüfung
+        </a></li>
+        <li><a href="#" class="s-link" data-page="financial-advisory">
+          <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Financial Advisory
+        </a></li>
+        <li><a href="#" class="s-link" data-page="steuerberatung">
+          <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Steuerberatung
+        </a></li>
+        <li><a href="#" class="s-link" data-page="kontakt">
+          <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.8 19.8 0 0 1 1.63 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          Kontakt
+        </a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#" class="sf-link" data-page="impressum">Impressum</a>
+      <span>|</span>
+      <a href="#" class="sf-link" data-page="agb">AGB</a>
+      <span>|</span>
+      <a href="#" class="sf-link" data-page="datenschutz">Datenschutz</a>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="#" class="header-logo" data-page="home">
+        <img src="assets/images/logo.png" alt="Highperformer Beratungsgesellschaft mbH" class="header-logo-img">
+      </a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Menü öffnen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main id="content-area">
+
+    <!-- ===== HOME ===== -->
+    <div class="page active" id="page-home">
+
+      <section class="hero">
+        <div class="hero-shapes">
+          <div class="hero-shape s1"></div>
+          <div class="hero-shape s2"></div>
+        </div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">Exzellenz in Beratung seit 2025</p>
+          <h1>Ihr Partner für <span class="highlight">nachhaltigen</span><br>Unternehmenserfolg</h1>
+          <p class="hero-sub">Hochqualifizierte Beratung in Unternehmensführung, Wirtschaftsprüfung, Financial Advisory und Steuerrecht – maßgeschneidert für den deutschen Mittelstand.</p>
+          <div class="hero-ctas">
+            <a href="#" class="btn-white" data-page="unternehmensberatung">Unsere Leistungen</a>
+            <a href="#" class="btn-outline-white" data-page="ueber-uns">Über uns</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-bar">
+        <div class="stats-inner">
+          <div class="stat-item"><span class="stat-n">1+</span><span class="stat-l">Jahr Erfahrung</span></div>
+          <div class="stat-item"><span class="stat-n">50+</span><span class="stat-l">Mandanten betreut</span></div>
+          <div class="stat-item"><span class="stat-n">25</span><span class="stat-l">Mitarbeiter</span></div>
+          <div class="stat-item"><span class="stat-n">1</span><span class="stat-l">Standort</span></div>
+        </div>
+      </section>
+
+      <section class="section bg-white">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Was wir tun</span>
+            <h2>Unsere Leistungen im Überblick</h2>
+            <p>Integrierte Beratungslösungen aus einer Hand – für nachhaltige Wertsteigerung in Ihrem Unternehmen.</p>
+          </div>
+          <div class="home-services-grid">
+            <div class="hs-card" data-page="unternehmensberatung" tabindex="0" role="button">
+              <div class="hs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+              <h3>Unternehmensberatung</h3>
+              <p>Strategische Beratung, Prozessoptimierung und Change Management für eine zukunftsfähige Ausrichtung.</p>
+              <span class="hs-more">Mehr erfahren →</span>
+            </div>
+            <div class="hs-card" data-page="wirtschaftspruefung" tabindex="0" role="button">
+              <div class="hs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+              <h3>Wirtschaftsprüfung</h3>
+              <p>Unabhängige Prüfung von Jahres- und Konzernabschlüssen nach HGB und IFRS – präzise und zuverlässig.</p>
+              <span class="hs-more">Mehr erfahren →</span>
+            </div>
+            <div class="hs-card" data-page="financial-advisory" tabindex="0" role="button">
+              <div class="hs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+              <h3>Financial Advisory</h3>
+              <p>Transaktionsberatung, Unternehmensfinanzierung und Restrukturierung für optimale Kapitalstrukturen.</p>
+              <span class="hs-more">Mehr erfahren →</span>
+            </div>
+            <div class="hs-card" data-page="steuerberatung" tabindex="0" role="button">
+              <div class="hs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <h3>Steuerberatung</h3>
+              <p>Umfassende steuerliche Beratung für Unternehmen und Privatpersonen – national und international.</p>
+              <span class="hs-more">Mehr erfahren →</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-light">
+        <div class="container">
+          <div class="why-grid">
+            <div class="why-text">
+              <span class="eyebrow">Warum Highperformer</span>
+              <h2>Beratung auf höchstem Niveau</h2>
+              <p>Seit unserer Gründung 2025 haben wir uns schnell als kompetenter Partner für den deutschen Mittelstand etabliert. Unser interdisziplinäres Team verbindet tiefes Branchenwissen mit innovativen Beratungsansätzen.</p>
+              <ul class="why-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Individuell zugeschnittene Lösungen</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Höchste fachliche Standards</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Erfahrenes Team mit Branchenexpertise</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Transparente Kommunikation auf Augenhöhe</li>
+              </ul>
+              <a href="#" class="btn-primary" data-page="ueber-uns">Mehr über uns</a>
+            </div>
+            <div class="why-visual">
+              <div class="why-boxes">
+                <div class="wb wb1"><span class="wb-n">50+</span><span class="wb-l">Mandate</span></div>
+                <div class="wb wb2"><span class="wb-n">98%</span><span class="wb-l">Mandantenzufriedenheit</span></div>
+                <div class="wb wb3"><span class="wb-n">10+</span><span class="wb-l">Transaktionen</span></div>
+                <div class="wb wb4"><span class="wb-n">1</span><span class="wb-l">Standort DE</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <h2>Bereit für das nächste Level?</h2>
+          <p>Kontaktieren Sie uns für ein unverbindliches Erstgespräch. Wir freuen uns, Ihre Herausforderungen kennenzulernen.</p>
+          <a href="#" class="btn-white" data-page="kontakt">Jetzt Kontakt aufnehmen</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== ÜBER UNS ===== -->
+    <div class="page" id="page-ueber-uns">
+      <div class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="#" data-page="home">Startseite</a> <span>›</span> Über uns</nav>
+          <h1>Über uns</h1>
+          <p>Wer wir sind – und was uns antreibt</p>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="sec-block">
+          <div class="container">
+            <div class="two-col">
+              <div>
+                <span class="eyebrow">Unsere Mission</span>
+                <h2>Exzellenz. Integrität. Wirkung.</h2>
+                <p>Die Highperformer Beratungsgesellschaft mbH steht für kompromisslose Qualität. Unser Anspruch ist nicht nur kurzfristige Lösungen zu liefern, sondern nachhaltige Wertsteigerung für unsere Mandanten zu erzielen.</p>
+                <p style="margin-top:16px">Gegründet 2025 in Berlin, sind wir ein junges und dynamisches Beratungshaus mit klarer Vision. Mit unserem Büro in Berlin sind wir nah an unseren Mandanten – mit dem Ziel, bundesweit und international zu wachsen.</p>
+              </div>
+              <div>
+                <div class="info-box">
+                  <div class="info-row"><span class="il">Gründungsjahr</span><span class="iv">2025</span></div>
+                  <div class="info-row"><span class="il">Hauptsitz</span><span class="iv">Berlin</span></div>
+                  <div class="info-row"><span class="il">Weitere Standorte</span><span class="iv">– (in Planung)</span></div>
+                  <div class="info-row"><span class="il">Mitarbeiter</span><span class="iv">25+</span></div>
+                  <div class="info-row"><span class="il">Mandanten</span><span class="iv">50+</span></div>
+                  <div class="info-row"><span class="il">Rechtsform</span><span class="iv">GmbH</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-block bg-light">
+          <div class="container">
+            <span class="eyebrow">Unsere Werte</span>
+            <h2>Was uns ausmacht</h2>
+            <div class="values-grid">
+              <div class="value-card">
+                <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <h3>Integrität</h3>
+                <p>Wir handeln stets im besten Interesse unserer Mandanten. Transparenz und ethisches Handeln sind die Grundlage unserer Arbeit.</p>
+              </div>
+              <div class="value-card">
+                <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <h3>Exzellenz</h3>
+                <p>Wir setzen höchste Maßstäbe an unsere Arbeit. Kontinuierliche Weiterbildung und Qualitätssicherung sind selbstverständlich.</p>
+              </div>
+              <div class="value-card">
+                <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <h3>Partnerschaft</h3>
+                <p>Wir verstehen uns als echte Partner. Langfristige Beziehungen und gegenseitiges Vertrauen stehen im Mittelpunkt.</p>
+              </div>
+              <div class="value-card">
+                <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                <h3>Innovation</h3>
+                <p>Wir setzen auf moderne Methoden, digitale Tools und kreative Lösungsansätze für die Herausforderungen von morgen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-block">
+          <div class="container">
+            <span class="eyebrow">Führungsteam</span>
+            <h2>Die Menschen hinter Highperformer</h2>
+            <p class="note">*Die dargestellten Personen sind fiktiv und dienen ausschließlich der Illustration.</p>
+            <div class="team-grid">
+              <div class="team-card">
+                <div class="avatar">SM</div>
+                <h3>Dr. Stefan Mayer</h3>
+                <p class="t-role">Managing Director &amp; Gründer</p>
+                <p class="t-bio">Wirtschaftsprüfer und Steuerberater mit über 15 Jahren Erfahrung. Zuvor Partner bei einer Big-Four-Gesellschaft, spezialisiert auf mittelständische Unternehmen und internationale Mandate.</p>
+              </div>
+              <div class="team-card">
+                <div class="avatar">SK</div>
+                <h3>Sandra Klein</h3>
+                <p class="t-role">Direktorin Unternehmensberatung</p>
+                <p class="t-bio">MBA Harvard Business School. 12 Jahre Erfahrung in strategischer Unternehmensberatung und Change Management. Schwerpunkt: Transformation und Effizienzprogramme im Mittelstand.</p>
+              </div>
+              <div class="team-card">
+                <div class="avatar">MH</div>
+                <h3>Markus Hoffmann</h3>
+                <p class="t-role">Direktor Financial Advisory</p>
+                <p class="t-bio">CFA-Charterholder und Spezialist für M&A-Transaktionen. Hat in seiner bisherigen Karriere über 20 Transaktionen mit einem Gesamtvolumen von mehr als 500 Mio. EUR erfolgreich begleitet.</p>
+              </div>
+              <div class="team-card">
+                <div class="avatar">JB</div>
+                <h3>Julia Braun</h3>
+                <p class="t-role">Leiterin Steuerberatung</p>
+                <p class="t-bio">Steuerberaterin und Fachanwältin für Steuerrecht. Spezialisiert auf internationales Steuerrecht, Verrechnungspreise und steuerliche Umstrukturierungen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== HISTORY ===== -->
+    <div class="page" id="page-history">
+      <div class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="#" data-page="home">Startseite</a> <span>›</span> History</nav>
+          <h1>Unsere Geschichte</h1>
+          <p>Von der Gründung zum aufstrebenden Beratungshaus</p>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="sec-block">
+          <div class="container">
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-year">Q1 2025</div>
+                <div class="tl-line"><div class="tl-dot"></div></div>
+                <div class="tl-body">
+                  <h3>Gründung in Berlin</h3>
+                  <p>Dr. Stefan Mayer gründet die Highperformer Beratungsgesellschaft mbH mit einem kleinen Team erfahrener Berater. Die Vision: ein Beratungshaus, das höchste fachliche Qualität mit echter Partnerschaft auf Augenhöhe verbindet.</p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-year">Q2 2025</div>
+                <div class="tl-line"><div class="tl-dot"></div></div>
+                <div class="tl-body">
+                  <h3>Erste Mandate &amp; Teamaufbau</h3>
+                  <p>Schneller Vertrauensaufbau in der Region Berlin-Brandenburg: Die ersten Mandate im Bereich Unternehmensberatung und Steuerberatung werden gewonnen. Das Team wächst auf 15 Mitarbeiter.</p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-year">Q3 2025</div>
+                <div class="tl-line"><div class="tl-dot"></div></div>
+                <div class="tl-body">
+                  <h3>Erste Großprojekte &amp; Wachstum</h3>
+                  <p>Erfolgreiche Durchführung erster größerer Beratungsprojekte im Bereich Prozessanalyse und Optimierung. Die positiven Referenzen stärken das Vertrauen in der Region und treiben das Wachstum weiter voran.</p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-year">Q4 2025</div>
+                <div class="tl-line"><div class="tl-dot"></div></div>
+                <div class="tl-body">
+                  <h3>Ausbau der Leistungsbereiche</h3>
+                  <p>Erweiterung des Leistungsportfolios um Financial Advisory und Wirtschaftsprüfung. Das Team wächst auf 20 Mitarbeiter. Über 30 aktive Mandate.</p>
+                </div>
+              </div>
+              <div class="tl-item tl-last">
+                <div class="tl-year tl-year-now">2026</div>
+                <div class="tl-line"><div class="tl-dot tl-dot-now"></div></div>
+                <div class="tl-body">
+                  <h3>Heute: 25+ Mitarbeiter, 50+ Mandanten</h3>
+                  <p>Highperformer wächst weiter und etabliert sich als aufstrebendes Beratungshaus. Wir investieren in Qualität, Fachexpertise und den Ausbau langfristiger Mandantenbeziehungen – und planen die Expansion an weitere Standorte.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== UNTERNEHMENSBERATUNG ===== -->
+    <div class="page" id="page-unternehmensberatung">
+      <div class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="#" data-page="home">Startseite</a> <span>›</span> Unternehmensberatung</nav>
+          <h1>Unternehmensberatung</h1>
+          <p>Strategische Beratung für nachhaltigen Unternehmenserfolg</p>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="sec-block">
+          <div class="container">
+            <p class="lead">Unternehmen stehen vor komplexen Herausforderungen: volatile Märkte, digitale Disruption, regulatorische Anforderungen. Unsere Berater verbinden strategische Kompetenz mit tiefem Branchenverständnis, um für Ihre spezifische Situation die richtige Lösung zu entwickeln.</p>
+            <h2 style="margin-top:48px">Unsere Beratungsfelder</h2>
+            <div class="svc-grid">
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+                <h3>Strategieberatung</h3>
+                <ul class="svc-list">
+                  <li>Unternehmensstrategie &amp; Vision</li>
+                  <li>Wettbewerbs- &amp; Marktanalysen</li>
+                  <li>Diversifikation &amp; Markteintritt</li>
+                  <li>Strategische Planung &amp; OKR</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                <h3>Prozessoptimierung</h3>
+                <ul class="svc-list">
+                  <li>Geschäftsprozessanalyse (IST/SOLL)</li>
+                  <li>Lean Management &amp; Six Sigma</li>
+                  <li>Workflow-Redesign</li>
+                  <li>ERP-Systemeinführung</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+                <h3>Digitale Transformation</h3>
+                <ul class="svc-list">
+                  <li>Digitalisierungsstrategie</li>
+                  <li>Technologieauswahl &amp; -implementierung</li>
+                  <li>Cloud-Strategie &amp; Datenmigration</li>
+                  <li>Automatisierungspotenziale</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <h3>Change Management</h3>
+                <ul class="svc-list">
+                  <li>Veränderungskommunikation</li>
+                  <li>Stakeholder-Management</li>
+                  <li>Post-Merger-Integration</li>
+                  <li>Führungsentwicklung</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sec-block bg-light">
+          <div class="container">
+            <h2>Unser Beratungsansatz</h2>
+            <div class="approach-steps">
+              <div class="approach-step"><div class="step-num">01</div><h3>Analyse</h3><p>Detaillierte Ist-Analyse: Daten, Prozesse, Strukturen und die Menschen in Ihrem Unternehmen.</p></div>
+              <div class="approach-step"><div class="step-num">02</div><h3>Konzeption</h3><p>Maßgeschneiderte Lösungskonzepte – entwickelt auf Basis unserer Erkenntnisse, gemeinsam mit Ihnen.</p></div>
+              <div class="approach-step"><div class="step-num">03</div><h3>Umsetzung</h3><p>Aktive Begleitung der Implementierung – als Partner, der Verantwortung übernimmt.</p></div>
+              <div class="approach-step"><div class="step-num">04</div><h3>Sicherung</h3><p>Nachhaltige Verankerung der Verbesserungen damit Ihr Unternehmen langfristig profitiert.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== WIRTSCHAFTSPRÜFUNG ===== -->
+    <div class="page" id="page-wirtschaftspruefung">
+      <div class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="#" data-page="home">Startseite</a> <span>›</span> Wirtschaftsprüfung</nav>
+          <h1>Wirtschaftsprüfung</h1>
+          <p>Unabhängig. Kompetent. Präzise.</p>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="sec-block">
+          <div class="container">
+            <p class="lead">Als zugelassene Wirtschaftsprüfungsgesellschaft (WPK-Nr. 123456789) prüfen wir Jahres- und Konzernabschlüsse nach HGB und IFRS. Unsere Prüfungen zeichnen sich durch methodische Strenge, tiefes Branchenverständnis und offene Kommunikation aus.</p>
+            <h2 style="margin-top:48px">Prüfungsleistungen</h2>
+            <div class="svc-grid">
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <h3>Jahresabschlussprüfung</h3>
+                <ul class="svc-list">
+                  <li>Pflichtprüfung nach §§ 316 ff. HGB</li>
+                  <li>Prüfung nach IFRS</li>
+                  <li>Prüfung des Lageberichts</li>
+                  <li>Risikofrüherkennungssysteme</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></div>
+                <h3>Konzernabschlussprüfung</h3>
+                <ul class="svc-list">
+                  <li>Konzernabschlüsse HGB &amp; IFRS</li>
+                  <li>Koordination Komponentenprüfer</li>
+                  <li>Konsolidierungsüberprüfung</li>
+                  <li>Segment- &amp; Tochtergesellschaftsprüfung</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4z"/></svg></div>
+                <h3>Due Diligence</h3>
+                <ul class="svc-list">
+                  <li>Financial Due Diligence</li>
+                  <li>Tax Due Diligence</li>
+                  <li>Vendor Due Diligence</li>
+                  <li>Working Capital Analyse</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+                <h3>Sonderprüfungen</h3>
+                <ul class="svc-list">
+                  <li>Gründungsprüfungen</li>
+                  <li>Verschmelzungs- &amp; Spaltungsprüfungen</li>
+                  <li>Forensic Accounting</li>
+                  <li>Interne Revision</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sec-block bg-light">
+          <div class="container">
+            <h2>Qualifikationen &amp; Mitgliedschaften</h2>
+            <div class="qual-list">
+              <div class="qual-item"><div class="qual-badge">WPK</div><div><h4>Zugelassene Wirtschaftsprüfungsgesellschaft</h4><p>Mitglied der Wirtschaftsprüferkammer, zugelassen zur gesetzlichen Abschlussprüfung in Deutschland.</p></div></div>
+              <div class="qual-item"><div class="qual-badge">IDW</div><div><h4>IDW-Mitglied</h4><p>Alle Prüfungen erfolgen nach den Prüfungsstandards des Instituts der Wirtschaftsprüfer in Deutschland (IDW).</p></div></div>
+              <div class="qual-item"><div class="qual-badge">ISA</div><div><h4>International anerkannte Standards</h4><p>Prüfungen nach ISA (International Standards on Auditing) für internationale Mandate und Konzernprüfungen.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FINANCIAL ADVISORY ===== -->
+    <div class="page" id="page-financial-advisory">
+      <div class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="#" data-page="home">Startseite</a> <span>›</span> Financial Advisory</nav>
+          <h1>Financial Advisory</h1>
+          <p>Strategische Finanzberatung für komplexe Entscheidungen</p>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="sec-block">
+          <div class="container">
+            <p class="lead">Unser Financial Advisory Team begleitet Sie bei den bedeutendsten finanziellen Entscheidungen Ihres Unternehmens – von Transaktionen über Restrukturierungen bis hin zu Unternehmensbewertungen. Analytische Exzellenz trifft auf tiefes Marktverständnis.</p>
+            <h2 style="margin-top:48px">Leistungen im Überblick</h2>
+            <div class="svc-grid">
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+                <h3>M&amp;A Beratung</h3>
+                <ul class="svc-list">
+                  <li>Buy-side &amp; Sell-side Beratung</li>
+                  <li>Transaktionsstrukturierung</li>
+                  <li>Bewertung &amp; Fairness Opinion</li>
+                  <li>Post-Merger-Integration</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+                <h3>Unternehmensfinanzierung</h3>
+                <ul class="svc-list">
+                  <li>Fremdkapitalfinanzierung</li>
+                  <li>Private Equity &amp; Venture Capital</li>
+                  <li>Mezzanine-Finanzierungen</li>
+                  <li>Kapitalstrukturoptimierung</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 12l-4 4-4-4M12 8v8"/></svg></div>
+                <h3>Restrukturierung</h3>
+                <ul class="svc-list">
+                  <li>Finanzielle Restrukturierung</li>
+                  <li>Sanierungs- &amp; Insolvenzberatung</li>
+                  <li>Restrukturierungskonzepte (IDW S6)</li>
+                  <li>Liquiditätsmanagement</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+                <h3>Unternehmensbewertung</h3>
+                <ul class="svc-list">
+                  <li>Ertragswert- &amp; DCF-Methode</li>
+                  <li>Multiplikatorverfahren</li>
+                  <li>Bewertung nach IDW S1</li>
+                  <li>Squeeze-out-Bewertungen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sec-block bg-light">
+          <div class="container">
+            <div class="fa-highlight">
+              <div>
+                <h2>Unsere Transaktionserfahrung</h2>
+                <p>Seit Aufbau des Financial Advisory Bereichs 2025 haben wir bereits über 10 Transaktionen erfolgreich begleitet. Unser Team verfügt über umfassende Erfahrung in Industrie, Technologie, Gesundheitswesen und Dienstleistungen.</p>
+              </div>
+              <div class="fa-stats">
+                <div class="fa-stat"><span class="fa-n">10+</span><span>Transaktionen</span></div>
+                <div class="fa-stat"><span class="fa-n">200 Mio. €+</span><span>Transaktionsvolumen</span></div>
+                <div class="fa-stat"><span class="fa-n">8+</span><span>Branchen</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== STEUERBERATUNG ===== -->
+    <div class="page" id="page-steuerberatung">
+      <div class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="#" data-page="home">Startseite</a> <span>›</span> Steuerberatung</nav>
+          <h1>Steuerberatung</h1>
+          <p>Steuerliche Optimierung mit Weitblick</p>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="sec-block">
+          <div class="container">
+            <p class="lead">Steuerrecht ist komplex und ständig im Wandel. Unsere Steuerberater und Fachanwälte für Steuerrecht behalten den Überblick für Sie. Umfassende steuerliche Beratung für Unternehmen, Selbstständige und Privatpersonen – national und international.</p>
+            <h2 style="margin-top:48px">Steuerliche Leistungen</h2>
+            <div class="svc-grid">
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <h3>Steuerdeklaration</h3>
+                <ul class="svc-list">
+                  <li>Körperschaftsteuererklärung</li>
+                  <li>Gewerbesteuererklärung</li>
+                  <li>Einkommensteuer &amp; KapESt</li>
+                  <li>Erbschaft- &amp; Schenkungsteuer</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                <h3>Internationales Steuerrecht</h3>
+                <ul class="svc-list">
+                  <li>Doppelbesteuerungsabkommen (DBA)</li>
+                  <li>Verrechnungspreise &amp; Dokumentation</li>
+                  <li>BEPS &amp; Pillar Two</li>
+                  <li>Grenzüberschreitende Umstrukturierung</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                <h3>Umsatzsteuer</h3>
+                <ul class="svc-list">
+                  <li>Umsatzsteuervoranmeldungen</li>
+                  <li>Innergemeinschaftlicher Verkehr</li>
+                  <li>OSS &amp; IOSS (E-Commerce)</li>
+                  <li>Umsatzsteuerprüfungen begleiten</li>
+                </ul>
+              </div>
+              <div class="svc-card">
+                <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+                <h3>Lohnsteuer &amp; Lohnbuchhaltung</h3>
+                <ul class="svc-list">
+                  <li>Lohnsteueranmeldungen</li>
+                  <li>Lohnsteuer-Außenprüfung</li>
+                  <li>Gehaltsoptimierung &amp; Benefits</li>
+                  <li>Reisekostenabrechnung</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sec-block bg-light">
+          <div class="container">
+            <h2>Branchen mit besonderer Expertise</h2>
+            <div class="industry-grid">
+              <div class="ind-item">Industrieunternehmen &amp; Mittelstand</div>
+              <div class="ind-item">Immobilien &amp; Real Estate</div>
+              <div class="ind-item">Technologie &amp; Start-ups</div>
+              <div class="ind-item">Gesundheitswesen &amp; Pharma</div>
+              <div class="ind-item">Finanzdienstleistungen</div>
+              <div class="ind-item">Non-Profit &amp; Stiftungen</div>
+              <div class="ind-item">Handelsunternehmen</div>
+              <div class="ind-item">Freie Berufe &amp; Selbstständige</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== KONTAKT ===== -->
+    <div class="page" id="page-kontakt">
+      <div class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="#" data-page="home">Startseite</a> <span>›</span> Kontakt</nav>
+          <h1>Kontakt</h1>
+          <p>Wir freuen uns auf Ihre Anfrage</p>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="sec-block">
+          <div class="container">
+            <div class="kontakt-layout">
+              <div class="kontakt-info">
+                <h2>Unser Standort</h2>
+                <div class="office-cards">
+                  <div class="office-card">
+                    <h4>Berlin <span class="hq-badge">Hauptsitz</span></h4>
+                    <p>Unter den Linden 21<br>10117 Berlin</p>
+                    <p>Tel: +49 30 123 456 0</p>
+                    <p>berlin@highperformer-beratung.de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="kontakt-form-wrap">
+                <h2>Nachricht senden</h2>
+                <form class="kontakt-form" action="#" method="POST">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="k-name">Ihr Name *</label>
+                      <input type="text" id="k-name" name="name" required placeholder="Dr. Max Mustermann">
+                    </div>
+                    <div class="form-group">
+                      <label for="k-company">Unternehmen</label>
+                      <input type="text" id="k-company" name="company" placeholder="Muster GmbH">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="k-email">E-Mail-Adresse *</label>
+                    <input type="email" id="k-email" name="email" required placeholder="m.mustermann@beispiel.de">
+                  </div>
+                  <div class="form-group">
+                    <label for="k-subject">Betreff</label>
+                    <select id="k-subject" name="subject">
+                      <option value="">Bitte auswählen…</option>
+                      <option>Unternehmensberatung</option>
+                      <option>Wirtschaftsprüfung</option>
+                      <option>Financial Advisory</option>
+                      <option>Steuerberatung</option>
+                      <option>Sonstiges</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="k-message">Ihre Nachricht *</label>
+                    <textarea id="k-message" name="message" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+                  </div>
+                  <button type="submit" class="btn-submit">Anfrage absenden →</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== IMPRESSUM ===== -->
+    <div class="page" id="page-impressum">
+      <div class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="#" data-page="home">Startseite</a> <span>›</span> Impressum</nav>
+          <h1>Impressum</h1>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="sec-block">
+          <div class="container">
+            <div class="legal-content">
+              <h2>Angaben gemäß § 5 TMG</h2>
+              <p><strong>Highperformer Beratungsgesellschaft mbH</strong><br>Unter den Linden 21<br>10117 Berlin<br>Deutschland</p>
+              <h3>Kontakt</h3>
+              <p>Telefon: +49 30 123 456 0<br>Telefax: +49 30 123 456 99<br>E-Mail: info@highperformer-beratung.de</p>
+              <h3>Handelsregister</h3>
+              <p>Eingetragen im Handelsregister des Amtsgerichts Berlin-Charlottenburg<br>Handelsregisternummer: HRB 123456</p>
+              <h3>Umsatzsteuer-ID</h3>
+              <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE 123 456 789</p>
+              <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+              <p>Wirtschaftsprüfungsgesellschaft und Steuerberatungsgesellschaft (Deutschland)<br>Zuständige Aufsichtsbehörden:<br>Wirtschaftsprüferkammer (WPK), Rauchstraße 26, 10787 Berlin<br>Steuerberaterkammer Berlin, Wichmannstraße 6, 10787 Berlin</p>
+              <h3>Vertretungsberechtigter Geschäftsführer</h3>
+              <p>Dr. Stefan Mayer</p>
+              <h3>Haftungsausschluss</h3>
+              <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+              <h3>Urheberrecht</h3>
+              <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung.</p>
+              <p class="legal-note"><em>Hinweis: Diese Website ist fiktiv und wurde im Rahmen des Universitätsprojekts „Systemanalyse &amp; Systemverbesserung" (6. Semester) erstellt.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== AGB ===== -->
+    <div class="page" id="page-agb">
+      <div class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="#" data-page="home">Startseite</a> <span>›</span> AGB</nav>
+          <h1>Allgemeine Geschäftsbedingungen</h1>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="sec-block">
+          <div class="container">
+            <div class="legal-content">
+              <p><strong>Stand: Januar 2025</strong></p>
+              <h2>§ 1 Geltungsbereich</h2>
+              <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Beratungs- und Dienstleistungsverträge zwischen der Highperformer Beratungsgesellschaft mbH (nachfolgend „Highperformer") und ihren Mandanten (nachfolgend „Auftraggeber").</p>
+              <h2>§ 2 Vertragsschluss</h2>
+              <p>Die Erbringung unserer Leistungen erfolgt auf Basis eines schriftlichen Auftragsverhältnisses. Angebote von Highperformer sind freibleibend. Ein Vertrag kommt erst zustande, wenn Highperformer den Auftrag schriftlich bestätigt oder mit der Ausführung beginnt.</p>
+              <h2>§ 3 Leistungsumfang</h2>
+              <p>Der Umfang der geschuldeten Leistungen ergibt sich aus dem jeweiligen Auftragsschreiben. Änderungen bedürfen der Schriftform und werden als Zusatzleistungen gesondert vergütet.</p>
+              <h2>§ 4 Vergütung und Zahlungsbedingungen</h2>
+              <p>Leistungen werden nach Zeitaufwand auf Basis vereinbarter Stundensätze oder als Pauschalhonorar vergütet. Rechnungen sind innerhalb von 14 Tagen ohne Abzug fällig. Bei Zahlungsverzug werden Verzugszinsen von 9 Prozentpunkten über dem Basiszinssatz berechnet.</p>
+              <h2>§ 5 Verschwiegenheit</h2>
+              <p>Highperformer verpflichtet sich, alle im Rahmen des Auftragsverhältnisses erlangten Informationen vertraulich zu behandeln. Diese Pflicht gilt auch nach Beendigung des Auftragsverhältnisses fort.</p>
+              <h2>§ 6 Haftung</h2>
+              <p>Highperformer haftet für Schäden aus der Verletzung wesentlicher Vertragspflichten sowie für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit unbegrenzt. Im Übrigen ist die Haftung auf das 5-fache des vereinbarten Honorars begrenzt, sofern kein Vorsatz oder grobe Fahrlässigkeit vorliegt.</p>
+              <h2>§ 7 Mitwirkungspflichten</h2>
+              <p>Der Auftraggeber stellt alle notwendigen Informationen, Unterlagen und Zugänge rechtzeitig und vollständig zur Verfügung.</p>
+              <h2>§ 8 Urheberrecht</h2>
+              <p>Alle erstellten Arbeitsergebnisse unterliegen dem Urheberrecht. Der Auftraggeber erhält das nicht ausschließliche Recht zur internen Nutzung nach vollständiger Honorarzahlung.</p>
+              <h2>§ 9 Datenschutz</h2>
+              <p>Die Verarbeitung personenbezogener Daten erfolgt nach Maßgabe der DSGVO und des BDSG.</p>
+              <h2>§ 10 Schlussbestimmungen</h2>
+              <p>Es gilt deutsches Recht. Gerichtsstand ist Berlin. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+              <p class="legal-note"><em>Hinweis: Diese AGB sind fiktiv und wurden im Rahmen eines Universitätsprojekts erstellt.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DATENSCHUTZ ===== -->
+    <div class="page" id="page-datenschutz">
+      <div class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="#" data-page="home">Startseite</a> <span>›</span> Datenschutz</nav>
+          <h1>Datenschutzerklärung</h1>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="sec-block">
+          <div class="container">
+            <div class="legal-content">
+              <h2>1. Allgemeines</h2>
+              <p>Die folgenden Hinweise geben einen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+              <h2>2. Verantwortliche Stelle</h2>
+              <p>Highperformer Beratungsgesellschaft mbH<br>Unter den Linden 21, 10117 Berlin<br>E-Mail: datenschutz@highperformer-beratung.de</p>
+              <h2>3. Datenerfassung auf dieser Website</h2>
+              <p>Diese Website erhebt beim Aufruf automatisch Daten (Server-Logfiles), die Ihr Browser übermittelt. Dies sind unter anderem: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners und Uhrzeit der Anfrage. Diese Daten sind nicht bestimmten Personen zuordenbar.</p>
+              <h2>4. Ihre Rechte</h2>
+              <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Sperrung oder Löschung Ihrer gespeicherten personenbezogenen Daten sowie das Recht auf Datenübertragbarkeit. Wenden Sie sich dazu an datenschutz@highperformer-beratung.de.</p>
+              <h2>5. Kontaktformular</h2>
+              <p>Bei Nutzung des Kontaktformulars werden die eingegebenen Daten zur Bearbeitung Ihrer Anfrage gespeichert. Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben.</p>
+              <p class="legal-note"><em>Hinweis: Diese Datenschutzerklärung ist fiktiv und wurde im Rahmen eines Universitätsprojekts erstellt.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="Highperformer Beratungsgesellschaft mbH" class="footer-logo-img">
+          <p class="footer-tagline">Exzellente Beratung für nachhaltigen Unternehmenserfolg – seit 2025.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Leistungen</h4>
+          <ul>
+            <li><a href="#" data-page="unternehmensberatung">Unternehmensberatung</a></li>
+            <li><a href="#" data-page="wirtschaftspruefung">Wirtschaftsprüfung</a></li>
+            <li><a href="#" data-page="financial-advisory">Financial Advisory</a></li>
+            <li><a href="#" data-page="steuerberatung">Steuerberatung</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Unternehmen</h4>
+          <ul>
+            <li><a href="#" data-page="ueber-uns">Über uns</a></li>
+            <li><a href="#" data-page="history">History</a></li>
+            <li><a href="#" data-page="kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Standort</h4>
+          <p>Unter den Linden 21<br>10117 Berlin</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025–2026 Highperformer Beratungsgesellschaft mbH · Alle Rechte vorbehalten</p>
+        <div class="footer-links">
+          <a href="#" data-page="impressum">Impressum</a>
+          <a href="#" data-page="agb">AGB</a>
+          <a href="#" data-page="datenschutz">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
